@@ -1,0 +1,124 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+git branch Postman
+- Jmeter
+git branch Jmeter
+- CheckLists
+git branch CheckLists
+- BugReports
+git branch BugReports
+- SQL
+git branch SQL
+- Charles
+git branch Charles
+- MobileTesting
+git branch MobileTesting
+
+2. Запушить все ветки на внешний репозиторий
+git push -u origin Postman Jmeter CheckLists BugReports SQL Charles MobileTesting
+
+3. В ветке BugReports сделать текстовый документ со структурой баг репорта
+git checkout BugReports
+Touch BugReport.txt
+Vim BugReport.txt
+
+BUG-REPORT
+
+ID:
+Title:
+Environment:
+Steps to reproduce:
+Priority:
+Severity:
+Expected Result:
+Actual Result:
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+Git commit -am "BugReport structure added"
+Git push
+
+5. Вмержить ветку Bug Reports в Main
+
+Git checkout main
+Git merge BugReports
+
+6. Запушить main на внешний репозиторий.
+
+Git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+Git checkout CheckLists
+Touch CheckList.txt
+Vim CheckList.txt
+
+CheckList Strusture
+
+1. ID
+2. Actions
+3. Expected Result
+4. Passed/Failed option
+
+8. Запушить структуру на внешний репозиторий
+
+git add .
+git commit -m "Checklist.txt"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+Done
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+git checkout main
+git pull
+
+
+
+
+
+
+
+
+
+КОНСПЕКТ УРОКА
+Git_ssh_Branches
+06.12.2021
+Group_25
+
+
+Создать SSH-ключ
+Ssh-keygen -t rsa -C "githubNickname"
+
+Мои SSH-ключи хранятся тут:
+/Users/olgakirzhaeva/.ssh/id_rsa.pub
+
+Чтобы добавить созданный ключ на гитхаб, нужно:
+0. Скопировать весь текст БЕЗ ЛИШНИХ СИМВОЛОВ из файла id_rsa.pub
+1. На гитхабе нажать на значок аккаунта
+2. Settings
+3. Слева SSH & GPG keys
+4. Зеленая кнопка New SSH key
+5. Вставляем ключ из id_rsa.pub в Key, в Title пишем название ключа
+6. Сохраняем
+
+
+BRANCH & MERGE
+Команда
+git branch
+Выводит список всех существующих веток и отмечает * ту, на которой мы сейчас находимся
+
+Создаст новую ветку apple_pay
+git branch apple_pay
+
+Переключится на ветку apple_pay
+Git checkout apple_pay
+
+Чтобы вмержить ветку apple_pay в main нужно переместиться в main (Git checkout main) а потому ввести команду git merge apple_pay
+
+Запушить ветку apple_pay на внешний репозиторий
+git push -u origin apple_pay
+

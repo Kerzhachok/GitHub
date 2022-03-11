@@ -1,0 +1,239 @@
+JSON
+
+4. Создать внешний репозиторий c названием JSON
+curl -u 'Olga Kirzhaeva' https://api.github.com/user/repos -d ‘{"name":"JSON"}'
+5. Клонировать репозиторий JSON на локальный компьютер
+git clone https://github.com/Kerzhachok/JSON.git
+6. Внутри локального JSON создать файл “new.json”
+touch new.json
+7. Добавить файл под гит
+git add .
+8. Закоммитить файл
+git commit -m "creating new.json"
+9. Отправить файл на внешний GitHub репозиторий
+git push
+10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON
+vim new.json
+
+{
+	"name": "Olga Kirzhaeva",
+	"age": 34,
+	"pets": ["4 cats", "1 dog"],
+	"future salary": "1000 $"
+}
+
+11. Отправить изменения на внешний репозиторий
+git commit -am "Recording data»
+git push
+12. Создать файл preferences.json
+touch preferences.json
+13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON
+vim preferences.json
+
+{
+	"Favorite movie": "Lawn Dogs",
+	"Favorite tv series": "Twin Peaks",
+	"Favorite dish": "Parmigiana",
+	"Favorite season": "Whatever",
+	"Dream country to travel": "Japan"
+}
+
+14. Создать файл skills.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+touch skills.json
+vim skills.json
+
+{
+	"Skills to be studied":
+			{
+			  "QA Theory": ["SDLC", "STLC", "Test-case", "Bug-report"],
+			  "Practise":
+			  	{
+			   	 "Programs": ["Postman", "XCode", "Android Studio"],
+			    	"Formats": ["JSON", "XML"]
+				}
+			}
+}
+15. Отправить сразу 2 файла на внешний репозиторий
+git add .
+git commit -am "2 new files - preferences.json and skills.json"
+git push
+16. На веб интерфейсе создать файл bug_report.json
+Done
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON
+Done
+19. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+20. Синхронизировать внешний и локальный репозиторий JSON
+git fetch (чтобы проверить) git pull (чтобы синхронизировать)
+
+XML
+
+21. Создать внешний репозиторий c названием XML
+curl -u 'Olga Kirzhaeva' https://api.github.com/user/repos -d ‘{"name":"XML"}'
+22. Клонировать репозиторий XML на локальный компьютер
+git clone https://github.com/Kerzhachok/XML.git
+23. Внутри локального XML создать файл “new.xml”
+touch new.xml
+24. Добавить файл под гит
+git add .
+25. Закоммитить файл
+git commit -m "create new.xml"
+26. Отправить файл на внешний GitHub репозиторий
+git push
+27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML
+
+cp JSON/new.json XML/new.xml
+vim new.xml
+
+<FAQ>
+        <name>Olga Kirzhaeva</name>
+        <age>34</age>
+        <pets>
+                <cats>4</cats> 
+                <dog>1</dog>
+        </pets>
+        <salary>1000$</salary>
+</FAQ>
+
+28. Отправить изменения на внешний репозиторий
+git commit -am "Recording data"
+git push
+29. Создать файл preferences.xml
+touch preferences.xml
+30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+
+cp JSON/preferences.json XML/preferences.xml
+vim preferences.xml
+
+<preferences>
+        <Favorites>
+                <movie>Lawn Dogs</movie>
+                <tv_series>Twin Peaks</tv_series>
+                <dish>Parmigiana</dish>
+                <season>Whatever</season>
+        </Favorites>
+        <country_to_travel>Japan</country_to_travel>
+</preferences>
+
+31. Создать файл skills.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+cd ..
+cp JSON/skills.json XML/skills.xml
+vim skills.xml
+
+<Skills>
+		<QA_Theory>
+		    <Issue>SDLC</Issue>
+		    <Issue>STLC</Issue>
+		    <Issue>Test-case</Issue>
+		    <Issue>Bug-report</Issue>
+		</QA_Theory>
+		<Practise>
+		    <Program>Postman</Program>
+		    <Program>XCode</Program>
+		    <Program>Android Studio</Program>
+		    <Format>JSON</Format>
+		    <Format>XML</Format>
+		</Practise>
+</Skills>
+32. Сделать коммит в одну строку.
+git add . && git commit -am "Preferences.xml and Skills.xml added"
+33. Отправить сразу 2 файла на внешний репозиторий
+git push
+34. На веб интерфейсе создать файл bug_report.xml
+Done
+35. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML
+
+<Bug-report>
+    <ID>1</ID>
+    <Title>CART - Unable to add new item to a cart</Title>
+    <Environment>MacBook Air 2018, MacOS Big Sur, Yandex Browser</Environment>
+    <Steps_to_reproduce>
+        <Step>Go to product page</Step>
+        <Step>Press to 'Add to cart button'</Step>
+        <Step>Go to cart</Step>
+    </Steps_to_reproduce>
+    <Priority>High</Priority>
+    <Severity>Critical</Severity>
+    <Expected_Result>The cart containes 1 item</Expected_Result>
+    <Actual_Result>The cart containes 0 items</Actual_Result>
+</Bug-report>
+
+37. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+38. Синхронизировать внешний и локальный репозиторий XML
+git pull
+
+
+TXT
+
+1. Создать внешний репозиторий c названием TXT curl -u 'Olga Kirzhaeva' https://api.github.com/user/repos -d '{"name":"TXT"}'
+2. Клонировать репозиторий TXT на локальный компьютер git clone https://github.com/Kerzhachok/TXT.git
+3. Внутри локального TXT создать файл “new.txt”
+cp JSON/new.json TXT/new.txt
+4. Добавить файл под гит
+git add .
+5. Закоммитить файл
+git commit -m "Create new.txt"
+6. Отправить файл на внешний GitHub репозиторий
+git push
+7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT
+vim new.txt
+About me
+
+Name - Olga Kirzhaeva
+Age - 34
+Pets:
+	4 cats
+	1 dog
+Future salary - $1000
+8. Отправить изменения на внешний репозиторий
+git commit -am "Recording data"
+git push
+9. Создать файл preferences.txt
+touch preferences.txt
+10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT
+vim preferences.txt
+Preferences
+
+Favorite movie - Lawn Dogs
+Favorite tv series - Twin Peaks
+Favorite dish - Parmigiana
+Favorite season - All
+Dream country to travel - Japan
+11. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+touch skills.txt
+vim skills.txt
+Skills to be studied
+
+QA Theory:
+	SDLC
+	STLC
+	Test-case
+	Bug-report
+Practise:
+	Programs:
+		Postman
+		XCode
+		Android Studio
+	Formats:
+		JSON
+		XML
+12. Сделать коммит в одну строку
+git add . && git commit -m "skills.txt added"
+13. Отправить сразу 2 файла на внешний репозиторий.
+git push
+14. На веб интерфейсе создать файл bug_report.txt
+Done
+15. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT
+Done
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе
+Done
+18. Синхронизировать внешний и локальный репозиторий TXT
+git pull
+
